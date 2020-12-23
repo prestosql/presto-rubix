@@ -42,11 +42,6 @@
 
         <dependency>
             <groupId>io.prestosql.rubix</groupId>
-            <artifactId>rubix-hadoop2</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-tests</artifactId>
         </dependency>
     </dependencies>

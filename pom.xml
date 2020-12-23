@@ -49,7 +49,6 @@
         <module>rubix-common</module>
         <module>rubix-presto</module>
         <module>rubix-prestosql</module>
-        <module>rubix-hadoop2</module>
         <module>rubix-bookkeeper</module>
         <module>rubix-tests</module>
         <module>assembly</module>
@@ -101,12 +100,6 @@
             <dependency>
                 <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-prestosql</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.prestosql.rubix</groupId>
-                <artifactId>rubix-hadoop2</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

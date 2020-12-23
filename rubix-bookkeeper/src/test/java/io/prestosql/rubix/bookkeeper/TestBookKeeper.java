@@ -20,7 +20,6 @@ import io.prestosql.rubix.common.utils.DataGen;
 import io.prestosql.rubix.common.utils.TestUtil;
 import io.prestosql.rubix.core.ClusterManagerInitilizationException;
 import io.prestosql.rubix.core.utils.DummyClusterManager;
-import io.prestosql.rubix.hadoop2.Hadoop2ClusterManager;
 import io.prestosql.rubix.presto.PrestoClusterManager;
 import io.prestosql.rubix.spi.CacheConfig;
 import io.prestosql.rubix.spi.CacheUtil;
@@ -177,25 +176,6 @@ public class TestBookKeeper
   {
     ClusterType type = ClusterType.TEST_CLUSTER_MANAGER;
     CacheConfig.setDummyClusterManager(conf, TEST_DNE_CLUSTER_MANAGER);
-
-    ClusterManager manager = bookKeeper.getClusterManagerInstance(type, conf);
-  }
-
-  @Test
-  public void testGetHadoop2ClusterManagerValidInstance() throws Exception
-  {
-    ClusterType type = ClusterType.HADOOP2_CLUSTER_MANAGER;
-    ClusterManager manager = bookKeeper.getClusterManagerInstance(type, conf);
-
-    assertTrue(manager instanceof Hadoop2ClusterManager, " Didn't initialize the correct cluster manager class." +
-        " Expected : " + Hadoop2ClusterManager.class + " Got : " + manager.getClass());
-  }
-
-  @Test(expectedExceptions = ClusterManagerInitilizationException.class)
-  public void testGetHadoop2ClusterManagerInValidInstance() throws Exception
-  {
-    ClusterType type = ClusterType.HADOOP2_CLUSTER_MANAGER;
-    CacheConfig.setHadoopClusterManager(conf, TEST_DNE_CLUSTER_MANAGER);
 
     ClusterManager manager = bookKeeper.getClusterManagerInstance(type, conf);
   }

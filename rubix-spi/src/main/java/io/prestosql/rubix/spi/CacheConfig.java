@@ -94,7 +94,6 @@ public class CacheConfig
   private static final String KEY_CACHING_VALIDATION_INTERVAL = "rubix.validation.caching.interval";
   private static final String KEY_HEALTH_STATUS_EXPIRY = "rubix.monitor.health.status.expiry";
   private static final String KEY_PRESTO_CLUSTER_MANAGER = "rubix.cluster.manager.presto.class";
-  private static final String KEY_HADOOP_CLUSTER_MANAGER = "rubix.cluster.manager.hadoop.class";
   private static final String KEY_DUMMY_CLUSTER_MANAGER = "rubix.cluster.manager.dummy.class";
   private static final String KEY_ENABLE_FILE_STALESSNESS_CHECK = "rubix.cache.file.staleness-check.enable";
   private static final String KEY_STALE_FILEINFO_EXPIRY_PERIOD = "rubix.cache.stale.fileinfo.expiry.period";
@@ -167,7 +166,6 @@ public class CacheConfig
   private static final int DEFAULT_FILE_VALIDATION_INTERVAL = 1800000; // ms (30min)
   private static final String DEFAULT_PRESTO_CLUSTER_MANAGER = "io.prestosql.rubix.presto.PrestoClusterManager";
   private static final String DEFAULT_PRESTOSQL_CLUSTER_MANAGER = "io.prestosql.rubix.prestosql.PrestoClusterManager";
-  private static final String DEFAULT_HADOOP_CLUSTER_MANAGER = "io.prestosql.rubix.hadoop2.Hadoop2ClusterManager";
   private static final String DEFAULT_DUMMY_CLUSTER_MANAGER = "io.prestosql.rubix.core.utils.DummyClusterManager";
   private static final String DEFAULT_DUMMY_MULTINODE_CLUSTER_MANAGER = "io.prestosql.rubix.core.utils.DummyClusterManagerMultinode";
   private static final String DEFAULT_METRIC_REPORTER_IMPL = "io.prestosql.rubix.common.metrics.NoOpReporter";
@@ -487,11 +485,6 @@ public class CacheConfig
     return conf.get(KEY_PRESTO_CLUSTER_MANAGER, DEFAULT_PRESTO_CLUSTER_MANAGER);
   }
 
-  public static String getHadoopClusterManager(Configuration conf)
-  {
-    return conf.get(KEY_HADOOP_CLUSTER_MANAGER, DEFAULT_HADOOP_CLUSTER_MANAGER);
-  }
-
   public static String getDummyClusterManager(Configuration conf)
   {
     return conf.get(KEY_DUMMY_CLUSTER_MANAGER, DEFAULT_DUMMY_CLUSTER_MANAGER);
@@ -500,8 +493,6 @@ public class CacheConfig
   public static String getClusterManagerClass(Configuration conf, ClusterType clusterType)
   {
     switch (clusterType) {
-      case HADOOP2_CLUSTER_MANAGER:
-        return conf.get(KEY_HADOOP_CLUSTER_MANAGER, DEFAULT_HADOOP_CLUSTER_MANAGER);
       case PRESTO_CLUSTER_MANAGER:
         return conf.get(KEY_PRESTO_CLUSTER_MANAGER, DEFAULT_PRESTO_CLUSTER_MANAGER);
       case TEST_CLUSTER_MANAGER:
@@ -798,11 +789,6 @@ public class CacheConfig
   public static void setPrestoClusterManager(Configuration conf, String clusterManager)
   {
     conf.set(KEY_PRESTO_CLUSTER_MANAGER, clusterManager);
-  }
-
-  public static void setHadoopClusterManager(Configuration conf, String clusterManager)
-  {
-    conf.set(KEY_HADOOP_CLUSTER_MANAGER, clusterManager);
   }
 
   public static void setDummyClusterManager(Configuration conf, String clusterManager)

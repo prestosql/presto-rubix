@@ -50,10 +50,6 @@
         </dependency>
         <dependency>
             <groupId>io.prestosql.rubix</groupId>
-            <artifactId>rubix-hadoop2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-presto</artifactId>
         </dependency>
 

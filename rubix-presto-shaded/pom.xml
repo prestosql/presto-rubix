@@ -62,7 +62,6 @@
                                     <include>io.prestosql.rubix:rubix-common</include>
                                     <include>io.prestosql.rubix:rubix-core</include>
                                     <include>io.prestosql.rubix:rubix-bookkeeper</include>
-                                    <include>io.prestosql.rubix:rubix-hadoop2</include>
                                     <include>io.prestosql.rubix:rubix-prestosql</include>
                                 </includes>
                             </artifactSet>

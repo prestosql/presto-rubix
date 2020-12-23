@@ -41,11 +41,6 @@
 
         <dependency>
             <groupId>io.prestosql.rubix</groupId>
-            <artifactId>rubix-hadoop2</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-tests</artifactId>
         </dependency>
     </dependencies>
@@ -80,21 +75,6 @@
                                     <finalName>rubix-presto-${project.version}</finalName>
                                     <descriptors>
                                         <descriptor>src/main/resources/assemblies/rubix-presto.xml</descriptor>
-                                    </descriptors>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>rubix-hadoop2</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                                <configuration>
-                                    <appendAssemblyId>false</appendAssemblyId>
-                                    <finalName>rubix-hadoop2-${project.version}</finalName>
-                                    <descriptors>
-                                        <descriptor>src/main/resources/assemblies/rubix-hadoop2.xml</descriptor>
                                     </descriptors>
                                 </configuration>
                             </execution>

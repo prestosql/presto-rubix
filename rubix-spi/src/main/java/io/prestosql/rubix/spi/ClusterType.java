@@ -17,9 +17,7 @@ package io.prestosql.rubix.spi;
  */
 public enum ClusterType
 {
-  HADOOP2_CLUSTER_MANAGER,
   PRESTO_CLUSTER_MANAGER,
-  HADOOP_CLUSTER_MANAGER,
   TEST_CLUSTER_MANAGER,
   TEST_CLUSTER_MANAGER_MULTINODE,
   PRESTOSQL_CLUSTER_MANAGER;
@@ -28,16 +26,12 @@ public enum ClusterType
   {
     switch (value) {
       case 0:
-        return HADOOP2_CLUSTER_MANAGER;
-      case 1:
         return PRESTO_CLUSTER_MANAGER;
-      case 2:
-        return HADOOP_CLUSTER_MANAGER;
-      case 3:
+      case 1:
         return TEST_CLUSTER_MANAGER;
-      case 4:
+      case 2:
         return TEST_CLUSTER_MANAGER_MULTINODE;
-      case 5:
+      case 3:
         return PRESTOSQL_CLUSTER_MANAGER;
       default:
         return null;

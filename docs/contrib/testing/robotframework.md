@@ -29,7 +29,7 @@ Example:
 *** Settings ***
 Resource  OperatingSystem
 Resource  bookkeeper.robot
-Resource  com.qubole.rubix.client.robotframework.BookKeeperClientRFLibrary
+Resource  io.prestosql.rubix.client.robotframework.BookKeeperClientRFLibrary
 ```
 
 ### *** Variables ***

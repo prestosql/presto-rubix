@@ -18,19 +18,19 @@ RUBIX_PRESTO_CLIENT_CONFIG="/etc/rubix/presto-config.xml"
     </property>
     <property>
         <name>fs.rubix.impl</name>
-        <value>com.qubole.rubix.presto.CachingPrestoS3FileSystem</value>
+        <value>io.prestosql.rubix.presto.CachingPrestoS3FileSystem</value>
     </property>
     <property>
         <name>fs.wasb.impl</name>
-        <value>com.qubole.rubix.presto.CachingPrestoNativeAzureFileSystem</value>
+        <value>io.prestosql.rubix.presto.CachingPrestoNativeAzureFileSystem</value>
     </property>
     <property>
         <name>fs.abfs.impl</name>
-        <value>com.qubole.rubix.presto.CachingPrestoAzureBlobFileSystem</value>
+        <value>io.prestosql.rubix.presto.CachingPrestoAzureBlobFileSystem</value>
     </property>
     <property>
         <name>fs.abfss.impl</name>
-        <value>com.qubole.rubix.presto.CachingPrestoSecureAzureBlobFileSystem</value>
+        <value>io.prestosql.rubix.presto.CachingPrestoSecureAzureBlobFileSystem</value>
     </property>
     <property>
         <name>caching.fs.presto-server-port</name>

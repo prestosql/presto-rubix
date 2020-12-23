@@ -38,7 +38,7 @@ log4j.appender.R.MaxBackupIndex=5
 log4j.appender.R.layout=org.apache.log4j.PatternLayout
 log4j.appender.R.layout.ConversionPattern=%d{yy/MM/dd HH:mm:ss,SSS} %p %t %c{2}: %m%n
 
-log4j.logger.com.qubole.rubix=DEBUG
+log4j.logger.io.prestosql.rubix=DEBUG
 log4j.logger.org.apache.hadoop.fs.s3a.S3AFileSystem=DEBUG
 
 EOF
@@ -117,7 +117,7 @@ start-bks() {
   bookkeeper_jar=${bookkeeper_jars[0]}
 
   export HADOOP_OPTS="-Dlog4j.configuration=file://${LOG4J_FILE}"
-  nohup ${HADOOP_DIR}/bin/hadoop jar ${bookkeeper_jar} com.qubole.rubix.bookkeeper.BookKeeperServer ${BKS_OPTIONS} > ${LOG_DIR}/cbk.log 2>&1 &
+  nohup ${HADOOP_DIR}/bin/hadoop jar ${bookkeeper_jar} io.prestosql.rubix.bookkeeper.BookKeeperServer ${BKS_OPTIONS} > ${LOG_DIR}/cbk.log 2>&1 &
   echo "$!" > ${PID_FILE}
   echo "Starting Cache BookKeeper server with pid `cat ${PID_FILE}`"
 

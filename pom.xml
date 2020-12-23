@@ -2,45 +2,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.qubole.rubix</groupId>
+    <groupId>io.prestosql.rubix</groupId>
     <artifactId>rubix-root</artifactId>
     <packaging>pom</packaging>
     <version>0.3.21-SNAPSHOT</version>
     <name>rubix</name>
-    <url>http://github.com/qubole/rubix</url>
+    <url>http://github.com/prestosql/presto-rubix</url>
     <description>Caching Framework for Big Data Engines</description>
-
-    <developers>
-        <developer>
-            <id>qubole</id>
-            <organization>Qubole Inc.</organization>
-            <organizationUrl>http://www.qubole.com</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-    </developers>
 
     <licenses>
         <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://github.com/qubole/rubix/blob/master/LICENSE.txt</url>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/qubole/rubix.git</connection>
-        <url>http://github.com/qubole/rubix</url>
-        <developerConnection>scm:git:git@github.com:qubole/rubix.git</developerConnection>
+        <connection>scm:git:git://github.com/prestosql/presto-rubix.git</connection>
+        <url>http://github.com/prestosql/presto-rubix</url>
+        <developerConnection>scm:git:git@github.com:prestosql/presto-rubix.git</developerConnection>
       <tag>HEAD</tag>
   </scm>
 
     <inceptionYear>2016</inceptionYear>
-    <organization>
-        <name>Qubole</name>
-        <url>http://www.qubole.com/</url>
-    </organization>
 
     <properties>
         <main.basedir>${project.basedir}</main.basedir>
@@ -83,68 +68,68 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-bookkeeper</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-core</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-presto</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-prestosql</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-hadoop2</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-spi</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>rubix-tests</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.qubole.rubix</groupId>
+                <groupId>io.prestosql.rubix</groupId>
                 <artifactId>assembly</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -261,7 +246,7 @@
                     <include>**/*.java</include>
                 </includes>
                 <excludes>
-                    <exclude>src/main/java/com/qubole/rubix/spi/fop/**</exclude>
+                    <exclude>src/main/java/io/prestosql/rubix/spi/fop/**</exclude>
                 </excludes>
             </configuration>
             <executions>
@@ -280,7 +265,7 @@
             <configuration>
                 <instrumentation>
                     <excludes>
-                        <exclude>**/com/qubole/rubix/spi/thrift/*.class</exclude>
+                        <exclude>**/io/prestosql/rubix/spi/thrift/*.class</exclude>
                     </excludes>
                 </instrumentation>
                 <check>true</check>

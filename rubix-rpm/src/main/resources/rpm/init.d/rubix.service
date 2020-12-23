@@ -31,11 +31,11 @@ start() {
   export HADOOP_OPTS="-Dlog4j.configuration=file://${LOG4J_PROPS_BKS}"
   ulimit -n 100000
   if [[ $is_master == True ]]; then
-        nohup $HADOOP_HOME/bin/hadoop jar /usr/lib/rubix/lib/rubix-bookkeeper-*.jar com.qubole.rubix.bookkeeper.BookKeeperServer \
+        nohup $HADOOP_HOME/bin/hadoop jar /usr/lib/rubix/lib/rubix-bookkeeper-*.jar io.prestosql.rubix.bookkeeper.BookKeeperServer \
             -conf /etc/rubix/rubix-site.xml \
             -Drubix.cluster.is-master=true &
   else
-        nohup $HADOOP_HOME/bin/hadoop jar /usr/lib/rubix/lib/rubix-bookkeeper-*.jar com.qubole.rubix.bookkeeper.BookKeeperServer \
+        nohup $HADOOP_HOME/bin/hadoop jar /usr/lib/rubix/lib/rubix-bookkeeper-*.jar io.prestosql.rubix.bookkeeper.BookKeeperServer \
             -conf /etc/rubix/rubix-site.xml &
   fi
   PID_BKS=$!
@@ -44,7 +44,7 @@ start() {
 
   # Start LocalDataTransferServer
   export HADOOP_OPTS="-Dlog4j.configuration=file://${LOG4J_PROPS_LDS}"
-  nohup $HADOOP_HOME/bin/hadoop jar /usr/lib/rubix/lib/rubix-bookkeeper-*.jar com.qubole.rubix.bookkeeper.LocalDataTransferServer \
+  nohup $HADOOP_HOME/bin/hadoop jar /usr/lib/rubix/lib/rubix-bookkeeper-*.jar io.prestosql.rubix.bookkeeper.LocalDataTransferServer \
             -conf /etc/rubix/rubix-site.xml &
   PID_LDS=$!
   echo ${PID_LDS} > ${PID_FILE_LDS}

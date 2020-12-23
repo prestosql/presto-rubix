@@ -27,8 +27,8 @@ configuration.
     mvn test
    
 
-* Add Qubole RubiX as upstream
+* Add RubiX as upstream
 
 
-    git remote add upstream https://github.com/qubole/rubix.git
+    git remote add upstream https://github.com/prestosql/presto-rubix.git
     git fetch upstream

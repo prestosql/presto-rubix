@@ -2,7 +2,7 @@
 Documentation   RubiX Multi-Node Integration Tests
 Resource        ..${/}shared${/}setup.robot
 Resource        ..${/}shared${/}bookkeeper.robot
-Library         com.qubole.rubix.client.robotframework.container.client.ContainerRequestClient
+Library         io.prestosql.rubix.client.robotframework.container.client.ContainerRequestClient
 
 *** Variables ***
 # Cache settings

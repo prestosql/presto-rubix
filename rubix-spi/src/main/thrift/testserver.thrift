@@ -1,4 +1,4 @@
-namespace java com.qubole.rubix.spi.thrift
+namespace java io.prestosql.rubix.spi.thrift
 
 typedef i32 int
 

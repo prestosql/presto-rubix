@@ -1,7 +1,7 @@
 *** Settings ***
 Library  Collections
-Library  com.qubole.rubix.client.robotframework.BookKeeperClientRFLibrary
-Library  com.qubole.rubix.client.robotframework.container.client.ContainerRequestClient
+Library  io.prestosql.rubix.client.robotframework.BookKeeperClientRFLibrary
+Library  io.prestosql.rubix.client.robotframework.container.client.ContainerRequestClient
 
 *** Keywords ***
 

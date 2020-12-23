@@ -22,8 +22,8 @@ else
     echo "${SPARK_EXECUTOR_EXTRA_CP_OPTION}    ${RUBIX_EXTRA_CP}" >> ${SPARK_DEFAULTS_CONF_FILE}
 fi
 
-echo "spark.hadoop.fs.s3.impl   com.qubole.rubix.hadoop2.CachingNativeS3FileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
-echo "spark.hadoop.fs.s3n.impl  com.qubole.rubix.hadoop2.CachingNativeS3FileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
-echo "spark.hadoop.fs.s3a.impl  com.qubole.rubix.hadoop2.CachingS3AFileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
-echo "spark.hadoop.fs.wasb.impl com.qubole.rubix.hadoop2.CachingNativeAzureFileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
+echo "spark.hadoop.fs.s3.impl   io.prestosql.rubix.hadoop2.CachingNativeS3FileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
+echo "spark.hadoop.fs.s3n.impl  io.prestosql.rubix.hadoop2.CachingNativeS3FileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
+echo "spark.hadoop.fs.s3a.impl  io.prestosql.rubix.hadoop2.CachingS3AFileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
+echo "spark.hadoop.fs.wasb.impl io.prestosql.rubix.hadoop2.CachingNativeAzureFileSystem" >> ${SPARK_DEFAULTS_CONF_FILE}
 echo "spark.hadoop.rubix.cache.dirprefix.list     /var/lib/rubix/cache/data" >> ${SPARK_DEFAULTS_CONF_FILE}

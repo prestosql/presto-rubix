@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>rubix-root</artifactId>
-        <groupId>com.qubole.rubix</groupId>
+        <groupId>io.prestosql.rubix</groupId>
         <version>0.3.21-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -16,37 +16,37 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-bookkeeper</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-presto</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-common</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-core</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-spi</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-hadoop2</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-tests</artifactId>
         </dependency>
     </dependencies>
@@ -68,22 +68,21 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <name>qubole-rubix</name>
-                            <copyright>2015, Qubole</copyright>
+                            <name>presto-rubix</name>
                             <architecture>x86_64</architecture>
                             <group>Applications/Databases</group>
-                            <description>RPM Package for Rubix (https://github.com/qubole/rubix</description>
+                            <description>RPM Package for Rubix (https://github.com/prestosql/presto-rubix</description>
                             <mappings>
                                 <mapping>
                                     <directory>${app.home}/lib/</directory>
                                     <dependency>
                                         <includes>
-                                            <include>com.qubole.rubix:rubix-bookkeeper</include>
-                                            <include>com.qubole.rubix:rubix-hadoop2</include>
-                                            <include>com.qubole.rubix:rubix-spi</include>
-                                            <include>com.qubole.rubix:rubix-presto</include>
-                                            <include>com.qubole.rubix:rubix-core</include>
-                                            <include>com.qubole.rubix:rubix-common</include>
+                                            <include>io.prestosql.rubix:rubix-bookkeeper</include>
+                                            <include>io.prestosql.rubix:rubix-hadoop2</include>
+                                            <include>io.prestosql.rubix:rubix-spi</include>
+                                            <include>io.prestosql.rubix:rubix-presto</include>
+                                            <include>io.prestosql.rubix:rubix-core</include>
+                                            <include>io.prestosql.rubix:rubix-common</include>
                                         </includes>
                                     </dependency>
                                     <artifact />

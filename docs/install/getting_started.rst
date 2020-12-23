@@ -53,8 +53,8 @@ To verify that the daemons are running, run the following command on each node::
 
 You should see the following two entries in the resulting list::
 
-    <pid> RunJar ... com.qubole.rubix.bookkeeper.BookKeeperServer
-    <pid> RunJar ... com.qubole.rubix.bookkeeper.LocalDataTransferServer
+    <pid> RunJar ... io.prestosql.rubix.bookkeeper.BookKeeperServer
+    <pid> RunJar ... io.prestosql.rubix.bookkeeper.LocalDataTransferServer
 
 If there was an issue starting the daemons, logs for RubiX can be found at ``/var/log/rubix/``.
 

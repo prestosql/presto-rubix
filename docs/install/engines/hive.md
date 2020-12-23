@@ -24,6 +24,6 @@ If you use this option, all file system interactions with
 tables with their location in AWS S3 will automatically use RubiX's CachingFileSystem.
 
     hive --hiveconf \
-        fs.s3.impl=com.qubole.rubix.hadoop2.CachingNativeS3FileSystem \
-	    fs.s3n.impl=com.qubole.rubix.hadoop2.CachingNativeS3FileSystem \
-        fs.s3a.impl=com.qubole.rubix.hadoop2.CachingS3AFileSystem
+        fs.s3.impl=io.prestosql.rubix.hadoop2.CachingNativeS3FileSystem \
+	    fs.s3n.impl=io.prestosql.rubix.hadoop2.CachingNativeS3FileSystem \
+        fs.s3a.impl=io.prestosql.rubix.hadoop2.CachingS3AFileSystem

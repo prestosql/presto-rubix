@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.qubole.rubix</groupId>
+        <groupId>io.prestosql.rubix</groupId>
         <artifactId>rubix-root</artifactId>
         <version>0.3.21-SNAPSHOT</version>
     </parent>
@@ -14,38 +14,28 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-bookkeeper</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
-            <artifactId>rubix-presto</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-common</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-core</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-spi</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.qubole.rubix</groupId>
-            <artifactId>rubix-hadoop2</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.qubole.rubix</groupId>
+            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-tests</artifactId>
         </dependency>
     </dependencies>
@@ -80,21 +70,6 @@
                                     <finalName>rubix-presto-${project.version}</finalName>
                                     <descriptors>
                                         <descriptor>src/main/resources/assemblies/rubix-presto.xml</descriptor>
-                                    </descriptors>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>rubix-hadoop2</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                                <configuration>
-                                    <appendAssemblyId>false</appendAssemblyId>
-                                    <finalName>rubix-hadoop2-${project.version}</finalName>
-                                    <descriptors>
-                                        <descriptor>src/main/resources/assemblies/rubix-hadoop2.xml</descriptor>
                                     </descriptors>
                                 </configuration>
                             </execution>

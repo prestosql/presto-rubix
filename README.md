@@ -1,7 +1,7 @@
 # RubiX
 
-[![Build Status](https://github.com/qubole/rubix/workflows/ci-tests/badge.svg)]
-[![codecov](https://codecov.io/gh/qubole/rubix/branch/master/graph/badge.svg)](https://codecov.io/gh/qubole/rubix)
+[![Build Status](https://github.com/prestosql/presto-rubix/workflows/ci-tests/badge.svg)]
+[![codecov](https://codecov.io/gh/prestosql/presto-rubix/branch/master/graph/badge.svg)](https://codecov.io/gh/prestosql/presto-rubix)
 
 
 RubiX is a light-weight data caching framework that can be used by Big-Data engines. RubiX uses local disks to provide

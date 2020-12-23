@@ -80,9 +80,9 @@ Cluster
 +==========================================+================================================================================================+===================+=================================================+=================+===============+
 | rubix.cluster.node.refresh.time          | The frequency at which the cluster node membership will be checked.                            | integer (s)       | 300 sec                                         | C & S           | Yes           |
 +------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+-------------------------------------------------+-----------------+---------------+
-| rubix.cluster.manager.hadoop.class       | The ``ClusterManager`` class to use for fetching node-related information for Hadoop clusters. | string            | com.qubole.rubix.hadoop2. Hadoop2ClusterManager | C & S           | No            |
+| rubix.cluster.manager.hadoop.class       | The ``ClusterManager`` class to use for fetching node-related information for Hadoop clusters. | string            | io.prestosql.rubix.hadoop2. Hadoop2ClusterManager | C & S           | No            |
 +------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+-------------------------------------------------+-----------------+---------------+
-| rubix.cluster.manager.presto.class       | The ``ClusterManager`` class to use for fetching node-related information for Presto clusters. | string            | com.qubole.rubix.presto. PrestoClusterManager   | C & S           | No            |
+| rubix.cluster.manager.presto.class       | The ``ClusterManager`` class to use for fetching node-related information for Presto clusters. | string            | io.prestosql.rubix.presto. PrestoClusterManager   | C & S           | No            |
 +------------------------------------------+------------------------------------------------------------------------------------------------+-------------------+-------------------------------------------------+-----------------+---------------+
 
 Metrics

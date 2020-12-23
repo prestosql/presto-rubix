@@ -50,7 +50,6 @@
         <module>rubix-bookkeeper</module>
         <module>rubix-tests</module>
         <module>assembly</module>
-        <module>rubix-rpm</module>
         <module>rubix-presto-shaded</module>
         <module>rubix-build</module>
     </modules>

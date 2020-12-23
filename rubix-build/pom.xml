@@ -36,10 +36,6 @@
         </dependency>
         <dependency>
             <groupId>io.prestosql.rubix</groupId>
-            <artifactId>rubix-presto</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-prestosql</artifactId>
         </dependency>
     </dependencies>
@@ -70,7 +66,6 @@
                                     <include>io.prestosql.rubix:rubix-core</include>
                                     <include>io.prestosql.rubix:rubix-bookkeeper</include>
                                     <include>io.prestosql.rubix:rubix-prestosql</include>
-                                    <include>io.prestosql.rubix:rubix-presto</include>
                                     <include>io.prestosql.rubix:rubix-client</include>
                                 </includes>
                             </artifactSet>

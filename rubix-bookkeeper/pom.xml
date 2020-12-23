@@ -50,7 +50,7 @@
         </dependency>
         <dependency>
             <groupId>io.prestosql.rubix</groupId>
-            <artifactId>rubix-presto</artifactId>
+            <artifactId>rubix-prestosql</artifactId>
         </dependency>
 
         <dependency>

@@ -30,7 +30,6 @@
     <properties>
         <main.basedir>${project.basedir}</main.basedir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dep.presto.version>0.208</dep.presto.version>
         <dep.prestosql.version>322</dep.prestosql.version>
         <commons-httpclient.version>3.0.1</commons-httpclient.version>
         <dep.guava.version>26.0-jre</dep.guava.version>
@@ -47,7 +46,6 @@
         <module>rubix-core</module>
         <module>rubix-client</module>
         <module>rubix-common</module>
-        <module>rubix-presto</module>
         <module>rubix-prestosql</module>
         <module>rubix-bookkeeper</module>
         <module>rubix-tests</module>
@@ -89,12 +87,6 @@
                 <artifactId>rubix-core</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
-            </dependency>
-
-            <dependency>
-                <groupId>io.prestosql.rubix</groupId>
-                <artifactId>rubix-presto</artifactId>
-                <version>${project.version}</version>
             </dependency>
 
             <dependency>

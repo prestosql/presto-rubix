@@ -20,7 +20,7 @@ import io.prestosql.rubix.common.utils.DataGen;
 import io.prestosql.rubix.common.utils.TestUtil;
 import io.prestosql.rubix.core.ClusterManagerInitilizationException;
 import io.prestosql.rubix.core.utils.DummyClusterManager;
-import io.prestosql.rubix.presto.PrestoClusterManager;
+import io.prestosql.rubix.prestosql.PrestoClusterManager;
 import io.prestosql.rubix.spi.CacheConfig;
 import io.prestosql.rubix.spi.CacheUtil;
 import io.prestosql.rubix.spi.ClusterManager;
@@ -183,7 +183,7 @@ public class TestBookKeeper
   @Test
   public void testGetPrestoClusterManagerValidInstance() throws Exception
   {
-    ClusterType type = ClusterType.PRESTO_CLUSTER_MANAGER;
+    ClusterType type = ClusterType.PRESTOSQL_CLUSTER_MANAGER;
     ClusterManager manager = bookKeeper.getClusterManagerInstance(type, conf);
 
     assertTrue(manager instanceof PrestoClusterManager, " Didn't initialize the correct cluster manager class." +
@@ -193,7 +193,7 @@ public class TestBookKeeper
   @Test(expectedExceptions = ClusterManagerInitilizationException.class)
   public void testGetPrestoClusterManagerInValidInstance() throws Exception
   {
-    ClusterType type = ClusterType.PRESTO_CLUSTER_MANAGER;
+    ClusterType type = ClusterType.PRESTOSQL_CLUSTER_MANAGER;
     CacheConfig.setPrestoClusterManager(conf, TEST_DNE_CLUSTER_MANAGER);
 
     ClusterManager manager = bookKeeper.getClusterManagerInstance(type, conf);

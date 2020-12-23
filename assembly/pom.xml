@@ -20,11 +20,6 @@
 
         <dependency>
             <groupId>io.prestosql.rubix</groupId>
-            <artifactId>rubix-presto</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.prestosql.rubix</groupId>
             <artifactId>rubix-common</artifactId>
             <version>${project.version}</version>
         </dependency>

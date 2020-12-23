@@ -164,7 +164,6 @@ public class CacheConfig
   private static final boolean DEFAULT_VALIDATION_ENABLED = false;
   private static final int DEFAULT_CACHING_VALIDATION_INTERVAL = 1800000; // ms (30min)
   private static final int DEFAULT_FILE_VALIDATION_INTERVAL = 1800000; // ms (30min)
-  private static final String DEFAULT_PRESTO_CLUSTER_MANAGER = "io.prestosql.rubix.presto.PrestoClusterManager";
   private static final String DEFAULT_PRESTOSQL_CLUSTER_MANAGER = "io.prestosql.rubix.prestosql.PrestoClusterManager";
   private static final String DEFAULT_DUMMY_CLUSTER_MANAGER = "io.prestosql.rubix.core.utils.DummyClusterManager";
   private static final String DEFAULT_DUMMY_MULTINODE_CLUSTER_MANAGER = "io.prestosql.rubix.core.utils.DummyClusterManagerMultinode";
@@ -480,11 +479,6 @@ public class CacheConfig
     return conf.getBoolean(KEY_VALIDATION_ENABLED, DEFAULT_VALIDATION_ENABLED);
   }
 
-  public static String getPrestoClusterManager(Configuration conf)
-  {
-    return conf.get(KEY_PRESTO_CLUSTER_MANAGER, DEFAULT_PRESTO_CLUSTER_MANAGER);
-  }
-
   public static String getDummyClusterManager(Configuration conf)
   {
     return conf.get(KEY_DUMMY_CLUSTER_MANAGER, DEFAULT_DUMMY_CLUSTER_MANAGER);
@@ -493,8 +487,6 @@ public class CacheConfig
   public static String getClusterManagerClass(Configuration conf, ClusterType clusterType)
   {
     switch (clusterType) {
-      case PRESTO_CLUSTER_MANAGER:
-        return conf.get(KEY_PRESTO_CLUSTER_MANAGER, DEFAULT_PRESTO_CLUSTER_MANAGER);
       case TEST_CLUSTER_MANAGER:
         return conf.get(KEY_DUMMY_CLUSTER_MANAGER, DEFAULT_DUMMY_CLUSTER_MANAGER);
       case TEST_CLUSTER_MANAGER_MULTINODE:
